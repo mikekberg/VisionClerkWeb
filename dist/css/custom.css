@@ -1,0 +1,582 @@
+@keyframes side-information-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes side-information-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes card-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes select-card {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.7) translateX(100%);
+  }
+}
+@keyframes card-fan-out {
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes card-slide-out-1 {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-250%) rotate(0deg);
+  }
+}
+@keyframes card-slide-out-2 {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-130%) rotate(0deg);
+  }
+}
+@keyframes card-slide-out-3 {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-10%) rotate(0deg);
+  }
+}
+@keyframes card-slide-out-4 {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(110%) rotate(0deg);
+  }
+}
+@keyframes card-slide-out-5 {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(230%) rotate(0deg);
+  }
+}
+@keyframes card-selected-1 {
+  0% {
+    transform: translateX(-250%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: scale(1.7) translate(-25%);
+  }
+}
+@keyframes card-unselected-1 {
+  0% {
+    transform: scale(1.7) translate(-25%);
+  }
+  100% {
+    transform: translateX(-250%) rotate(0deg) scale(1);
+  }
+}
+@keyframes card-slide-back-1 {
+  0% {
+    transform: translateX(-250%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(-250%) scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+@keyframes card-selected-2 {
+  0% {
+    transform: translateX(-130%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: scale(1.7) translate(-25%);
+  }
+}
+@keyframes card-unselected-2 {
+  0% {
+    transform: scale(1.7) translate(-25%);
+  }
+  100% {
+    transform: translateX(-130%) rotate(0deg) scale(1);
+  }
+}
+@keyframes card-slide-back-2 {
+  0% {
+    transform: translateX(-130%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(-130%) scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+@keyframes card-selected-3 {
+  0% {
+    transform: translateX(-10%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: scale(1.7) translate(-25%);
+  }
+}
+@keyframes card-unselected-3 {
+  0% {
+    transform: scale(1.7) translate(-25%);
+  }
+  100% {
+    transform: translateX(-10%) rotate(0deg) scale(1);
+  }
+}
+@keyframes card-slide-back-3 {
+  0% {
+    transform: translateX(-10%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(-10%) scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+@keyframes card-selected-4 {
+  0% {
+    transform: translateX(110%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: scale(1.7) translate(-25%);
+  }
+}
+@keyframes card-unselected-4 {
+  0% {
+    transform: scale(1.7) translate(-25%);
+  }
+  100% {
+    transform: translateX(110%) rotate(0deg) scale(1);
+  }
+}
+@keyframes card-slide-back-4 {
+  0% {
+    transform: translateX(110%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(110%) scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+@keyframes card-selected-5 {
+  0% {
+    transform: translateX(230%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: scale(1.7) translate(-25%);
+  }
+}
+@keyframes card-unselected-5 {
+  0% {
+    transform: scale(1.7) translate(-25%);
+  }
+  100% {
+    transform: translateX(230%) rotate(0deg) scale(1);
+  }
+}
+@keyframes card-slide-back-5 {
+  0% {
+    transform: translateX(230%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(230%) scale(0.75) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+code {
+  white-space: pre-line;
+}
+
+.card-fan {
+  width: 200px;
+  height: 300px;
+}
+.card-fan.card-slide-start img {
+  animation: card-slide-start 1000ms ease-out forwards;
+}
+.card-fan.card-slide-out img:nth-child(1) {
+  animation: card-slide-out-1 1000ms ease-out forwards;
+}
+.card-fan.card-slide-out img:nth-child(2) {
+  animation: card-slide-out-2 1000ms ease-out forwards;
+}
+.card-fan.card-slide-out img:nth-child(3) {
+  animation: card-slide-out-3 1000ms ease-out forwards;
+}
+.card-fan.card-slide-out img:nth-child(4) {
+  animation: card-slide-out-4 1000ms ease-out forwards;
+}
+.card-fan.card-slide-out img:nth-child(5) {
+  animation: card-slide-out-5 1000ms ease-out forwards;
+}
+.card-fan.card-selected-1 img:nth-child(1) {
+  z-index: 200;
+  animation: card-selected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-1 img:nth-child(1) {
+  animation: card-unselected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-1 img:nth-child(2) {
+  z-index: 100;
+  animation: card-slide-back-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-1 img:nth-child(1) {
+  animation: card-unselected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-1 img:nth-child(3) {
+  z-index: 100;
+  animation: card-slide-back-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-1 img:nth-child(1) {
+  animation: card-unselected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-1 img:nth-child(4) {
+  z-index: 100;
+  animation: card-slide-back-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-1 img:nth-child(1) {
+  animation: card-unselected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-1 img:nth-child(5) {
+  z-index: 100;
+  animation: card-slide-back-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-1 img:nth-child(1) {
+  animation: card-unselected-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-2 img:nth-child(1) {
+  z-index: 100;
+  animation: card-slide-back-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-2 img:nth-child(2) {
+  animation: card-unselected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-2 img:nth-child(2) {
+  z-index: 200;
+  animation: card-selected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-2 img:nth-child(2) {
+  animation: card-unselected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-2 img:nth-child(3) {
+  z-index: 100;
+  animation: card-slide-back-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-2 img:nth-child(2) {
+  animation: card-unselected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-2 img:nth-child(4) {
+  z-index: 100;
+  animation: card-slide-back-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-2 img:nth-child(2) {
+  animation: card-unselected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-2 img:nth-child(5) {
+  z-index: 100;
+  animation: card-slide-back-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-2 img:nth-child(2) {
+  animation: card-unselected-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-3 img:nth-child(1) {
+  z-index: 100;
+  animation: card-slide-back-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-3 img:nth-child(3) {
+  animation: card-unselected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-3 img:nth-child(2) {
+  z-index: 100;
+  animation: card-slide-back-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-3 img:nth-child(3) {
+  animation: card-unselected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-3 img:nth-child(3) {
+  z-index: 200;
+  animation: card-selected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-3 img:nth-child(3) {
+  animation: card-unselected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-3 img:nth-child(4) {
+  z-index: 100;
+  animation: card-slide-back-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-3 img:nth-child(3) {
+  animation: card-unselected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-3 img:nth-child(5) {
+  z-index: 100;
+  animation: card-slide-back-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-3 img:nth-child(3) {
+  animation: card-unselected-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-4 img:nth-child(1) {
+  z-index: 100;
+  animation: card-slide-back-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-4 img:nth-child(4) {
+  animation: card-unselected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-4 img:nth-child(2) {
+  z-index: 100;
+  animation: card-slide-back-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-4 img:nth-child(4) {
+  animation: card-unselected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-4 img:nth-child(3) {
+  z-index: 100;
+  animation: card-slide-back-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-4 img:nth-child(4) {
+  animation: card-unselected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-4 img:nth-child(4) {
+  z-index: 200;
+  animation: card-selected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-4 img:nth-child(4) {
+  animation: card-unselected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-4 img:nth-child(5) {
+  z-index: 100;
+  animation: card-slide-back-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-4 img:nth-child(4) {
+  animation: card-unselected-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-5 img:nth-child(1) {
+  z-index: 100;
+  animation: card-slide-back-1 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-5 img:nth-child(5) {
+  animation: card-unselected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-5 img:nth-child(2) {
+  z-index: 100;
+  animation: card-slide-back-2 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-5 img:nth-child(5) {
+  animation: card-unselected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-5 img:nth-child(3) {
+  z-index: 100;
+  animation: card-slide-back-3 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-5 img:nth-child(5) {
+  animation: card-unselected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-5 img:nth-child(4) {
+  z-index: 100;
+  animation: card-slide-back-4 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-5 img:nth-child(5) {
+  animation: card-unselected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-selected-5 img:nth-child(5) {
+  z-index: 200;
+  animation: card-selected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan.card-unselected-5 img:nth-child(5) {
+  animation: card-unselected-5 1000ms ease-out forwards;
+  transform-origin: center center;
+}
+.card-fan img {
+  position: absolute;
+  display: block;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  width: 200px;
+  transform-origin: center 120%;
+  transform: translateX(300px);
+  animation: card-fan-out 1000ms ease-out 1s forwards;
+}
+.card-fan img.selected {
+  animation: select-card 300ms ease-out forwards;
+}
+.card-fan img:nth-child(1) {
+  z-index: 99;
+  transform: translate(-50%, -50%) rotate(-46.6666666667deg);
+}
+.card-fan img:nth-child(2) {
+  z-index: 98;
+  transform: translate(-50%, -50%) rotate(-23.3333333333deg);
+}
+.card-fan img:nth-child(3) {
+  z-index: 97;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.card-fan img:nth-child(4) {
+  z-index: 96;
+  transform: translate(-50%, -50%) rotate(23.3333333333deg);
+}
+.card-fan img:nth-child(5) {
+  z-index: 95;
+  transform: translate(-50%, -50%) rotate(46.6666666667deg);
+}
+
+.card-info-table {
+  width: 400px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.side-card-information {
+  position: absolute;
+  right: 5%;
+  top: 18%;
+  z-index: 200;
+  padding: 12px;
+}
+.side-card-information.show .side-card-information-code,
+.side-card-information.show .card-info-table {
+  animation: side-information-slide 600ms ease-in 700ms forwards;
+}
+.side-card-information.hide .side-card-information-code,
+.side-card-information.hide .card-info-table {
+  animation: side-information-out 600ms ease-in forwards;
+}
+
+.side-card-information-code {
+  background-color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 1.125em;
+  line-height: 2;
+  width: 450px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+body:not(.device-xs) .price-block:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+body:not(.device-xs) .price-block:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: 1px solid #eee;
+}
+
+.price-block-wrap {
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(14, 72, 119, 0.2);
+}
+
+#op-plan-subscription-from button,
+#op-plan-subscription-from input {
+  border-radius: 6px;
+}
+
+.price-block {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.price-block:hover,
+.price-block.checked {
+  background-color: #f8f9fa;
+}
+
+.op-plan-subscription-from-processing .form-process {
+  display: block;
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+
+.price-tenure {
+  font-size: 16px;
+  color: #aaa !important;
+  text-transform: none;
+  font-weight: 400;
+}
+
+#slider h1,
+#slider {
+  color: white;
+}
