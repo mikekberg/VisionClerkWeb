@@ -1,3 +1,11 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes side-information-slide {
   0% {
     opacity: 0;
@@ -515,6 +523,25 @@ code {
 .side-card-information.hide .side-card-information-code,
 .side-card-information.hide .card-info-table {
   animation: side-information-out 600ms ease-in forwards;
+}
+
+.card-info-table tr td:nth-child(2) span {
+  opacity: 0;
+}
+.side-card-information.show .card-info-table tr:nth-child(1) td:nth-child(2) span  {
+  animation: fade-in 1000ms ease-in 1500ms forwards;
+}
+.side-card-information.show .card-info-table tr:nth-child(2) td:nth-child(2) span  {
+  animation: fade-in 1000ms ease-in 1800ms forwards;
+}
+.side-card-information.show .card-info-table tr:nth-child(3) td:nth-child(2) span  {
+  animation: fade-in 1000ms ease-in 2100ms forwards;
+}
+.side-card-information.show .card-info-table tr:nth-child(4) td:nth-child(2) span  {
+  animation: fade-in 1000ms ease-in 2400ms forwards;
+}
+.side-card-information.show .card-info-table tr:nth-child(5) td:nth-child(2) span  {
+  animation: fade-in 1000ms ease-in 2700ms forwards;
 }
 
 .side-card-information-code {

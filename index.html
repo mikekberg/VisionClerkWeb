@@ -213,19 +213,11 @@
               class="d-flex flex-column align-items-center justify-content-center h-100 p-5"
             >
               <div class="card-fan">
-                <img
-                  src="https://cards.scryfall.io/large/front/6/a/6a225462-947c-49d7-81b2-91f875664dca.jpg?1559600488"
-                />
-                <img
-                  src="https://images.ygoprodeck.com/images/cards/501000004.jpg"
-                />
-                <img
-                  src="https://images.lorcania.com/cards/ur/211_en_diablo-716.webp"
-                />
-                <img
-                  src="https://cards.scryfall.io/large/front/f/d/fd00d56a-86bd-41d8-82b6-975404ef8067.jpg?1719564758"
-                />
-                <img src="https://images.pokemontcg.io/sv6/214_hires.png" />
+                <img src="/images/cards/4ed-347-sunglasses-of-urza.jpg" />
+                <img src="/images/cards/501000004.jpg" />
+                <img src="/images/cards/211_en_diablo-716.webp" />
+                <img src="/images/cards/mh3-15-ulamog-the-defiler.jpg" />
+                <img src="/images/cards/214_hires.png" />
               </div>
             </div>
             <div class="side-card-information">
@@ -693,7 +685,7 @@
                 $(".side-card-information").removeClass("show");
                 $(".side-card-information").addClass("hide");
                 $(".card-fan").addClass(`card-unselected-${cardIndex}`);
-              }, 2000);
+              }, 4000);
             } else if (animationName.indexOf("card-unselected-") > -1) {
               let cardIndex = parseInt(animationName.split("-")[2]);
               cardIndex = cardIndex === 5 ? 0 : cardIndex;
