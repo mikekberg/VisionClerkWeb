@@ -553,12 +553,7 @@ if (typeof jQuery !== "undefined") {
         easing,
         behavior = "smooth"
       ) {
-        return;
-        if (
-          easing &&
-          typeof jQuery !== "undefined" &&
-          typeof jQuery.easing["easeOutQuad"] !== "undefined"
-        ) {
+        if (false && easing && typeof jQuery !== "undefined") {
           jQuery("body,html")
             .stop(true)
             .animate(
@@ -1820,54 +1815,54 @@ if (typeof jQuery !== "undefined") {
           onClickTopMenuCurrent.push(topMenu.querySelector(".current"));
         });
 
-        //document.addEventListener(
-        //  "click",
-        //  function (e) {
-        //    if (
-        //      !e.target.closest(".primary-menu-trigger") &&
-        //      !e.target.closest(".primary-menu")
-        //    ) {
-        //      _reset();
-        //      _functions();
-        //    }
-        //
-        //    if (!e.target.closest(".primary-menu.on-click")) {
-        //      onClickMenus.forEach(function (pMenu) {
-        //        pMenu.querySelectorAll(".menu-item").forEach(function (item) {
-        //          item.classList.remove("current");
-        //        });
-        //      });
-        //
-        //      onClickMenuCurrent?.forEach(function (current) {
-        //        current?.classList.add("current");
-        //      });
-        //    }
-        //
-        //    if (!e.target.closest(".top-links.on-click")) {
-        //      onClickTopMenus.forEach(function (topMenu) {
-        //        topMenu
-        //          .querySelectorAll(".top-links-sub-menu,.top-links-section")
-        //          .forEach(function (item) {
-        //            item.classList.remove("d-block");
-        //          });
-        //      });
-        //
-        //      onClickTopMenus.forEach(function (topMenu) {
-        //        topMenu
-        //          .querySelectorAll(".top-links-item")
-        //          .forEach(function (item) {
-        //            item.classList.remove("current");
-        //          });
-        //      });
-        //
-        //      onClickTopMenuCurrent?.forEach(function (current) {
-        //        current?.classList.add("current");
-        //      });
-        //    }
-        //  },
-        //  false
-        //);
-        //
+        document.addEventListener(
+          "click",
+          function (e) {
+            if (
+              !e.target.closest(".primary-menu-trigger") &&
+              !e.target.closest(".primary-menu")
+            ) {
+              _reset();
+              _functions();
+            }
+
+            if (!e.target.closest(".primary-menu.on-click")) {
+              onClickMenus.forEach(function (pMenu) {
+                pMenu.querySelectorAll(".menu-item").forEach(function (item) {
+                  item.classList.remove("current");
+                });
+              });
+
+              onClickMenuCurrent?.forEach(function (current) {
+                current?.classList.add("current");
+              });
+            }
+
+            if (!e.target.closest(".top-links.on-click")) {
+              onClickTopMenus.forEach(function (topMenu) {
+                topMenu
+                  .querySelectorAll(".top-links-sub-menu,.top-links-section")
+                  .forEach(function (item) {
+                    item.classList.remove("d-block");
+                  });
+              });
+
+              onClickTopMenus.forEach(function (topMenu) {
+                topMenu
+                  .querySelectorAll(".top-links-item")
+                  .forEach(function (item) {
+                    item.classList.remove("current");
+                  });
+              });
+
+              onClickTopMenuCurrent?.forEach(function (current) {
+                current?.classList.add("current");
+              });
+            }
+          },
+          false
+        );
+
         document.querySelectorAll(".menu-item").forEach(function (el) {
           if (el.querySelectorAll(".sub-menu-container").length > 0) {
             el.classList.add("sub-menu");
